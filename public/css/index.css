@@ -1,0 +1,12 @@
+body {background-image: url("/img/bg.jpg");}
+.vcenter{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.content {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    -webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+}
+.content h3 {margin-bottom: 30px;}
+.main-img {display:flex;justify-content:center;align-items:center;}
+.content button {margin-top: 10px;}

@@ -1,0 +1,43 @@
+/* Customized Bootstrap Styles*/
+
+body{font-family:yekan;}
+.tooltip.top{font-family:yekan}
+.yekan{font-family:yekan;}
+.iransans{ font-family: iransans;}
+.rounded{border-radius:500px;}
+.test{background:red;}
+.center{text-align:center;}
+.no-border{border:0px;}
+.no-scroll{margin-right: 0px;margin-left: 0px;}
+.no-margin{margin:0px;}
+.no-padding{padding:0px;}
+.no-pad-left{padding-left:0px;}
+.no-pad-right{padding-right:0px;}
+.no-pad-top{padding-top:0px;}
+.no-pad-down{padding-down:0px;}
+.c-blue{color:#2b92c2 !important;}
+.c-yellow{color:#fbdb00 !important;}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
+}
+
+.margin-top-10{margin-top:10px;}
+.margin-top-5{margin-top:5px;}
+
+a {
+	transition: all .3s ease-in-out 0s;
+	-webkit-transition: all .3s ease-in-out 0s;
+}
+a:hover {text-decoration: none;}
+
+.transition {
+    transition: all .3s ease-in-out 0s;
+    -webkit-transition: all .3s ease-in-out 0s;
+}
+
+.btn {font-family: yekan}
