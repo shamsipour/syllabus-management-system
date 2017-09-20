@@ -12,10 +12,10 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $user = new \App\User();
-        $user->name = "عرفان صحاف نژاد";
-        $user->username = "erfansahaf";
-        $user->email = "erfan.sahaf@gmail.com";
-        $user->password = \Illuminate\Support\Facades\Hash::make("123456");
+        $user->name = env('ADMIN_NAME', "دانشکده شمسی پور");
+        $user->username = env('ADMIN_USERNAME', 'erfansahaf');
+        $user->email = env("ADMIN_EMAIL", "erfan.sahaf@gmail.com");
+        $user->password = \Illuminate\Support\Facades\Hash::make(env('ADMIN_PASSWORD', '123456'));
         $user->save();
     }
 }
