@@ -11,6 +11,7 @@
     use App\User;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\Schema;
     use Illuminate\Support\Facades\Storage;
     use View;
     use Maatwebsite\Excel\Facades\Excel;
@@ -85,13 +86,13 @@
                     $sheet->fromModel(Major::all(), null, 'A1', true);
                 });
                 $excel->sheet('lessons', function($sheet) {
-                    $sheet->fromModel(Lesson::all(), null, 'A1', true);
+                    $sheet->fromModel(Lesson::all()->makeHidden(['level_caption'])->makeVisible(['id', 'major_id']), null, 'A1', true);
                 });
                 $excel->sheet('teachers', function($sheet) {
-                    $sheet->fromModel(Teacher::all(), null, 'A1', true);
+                    $sheet->fromModel(Teacher::all()->makeVisible(['mobile', 'email']), null, 'A1', true);
                 });
                 $excel->sheet('plans', function($sheet) {
-                    $sheet->fromModel(Plan::all(), null, 'A1', true);
+                    $sheet->fromModel(Plan::all()->makeVisible(['id', 'created_at', 'updated_at', 'time_id', 'lesson_id', 'teacher_id']), null, 'A1', true);
                 });
             })->download('xls');
         }
@@ -114,14 +115,22 @@
             Excel::load($file->getRealPath(), function($reader) {
                 $reader->each(function($sheet){
                     $table = strtolower($sheet->getTitle());
+                    $columns = Schema::getColumnListing($table);
+                    $data = $sheet->toArray();
+                    // Remove those fields that are not exist in table's columns
+//                    dump($data);
+                    foreach($data as $recordKey => $record)
+                        foreach($record as $key => $value)
+                            if(!in_array($key, $columns))
+                                unset($data[$recordKey][$key]);
+//                    dump($data);
                     // Empty all tables except users table
                     if($table != 'users'){
                         DB::table($table)->delete();
-                        DB::table($table)->insert($sheet->toArray());
+                        DB::table($table)->insert($data);
                     }
                 });
             });
-
             return redirect()->route('settings')->with(['alert-type' => 'success', 'alert-title' => 'عملیات با موفقیت انجام شد.', 'alert-message' => 'اطلاعات تمامی جداول بجز جدول کاربران با موفقیت بازگردانی شد.']);
         }
 

@@ -17,8 +17,9 @@ class CreateTeachersTable extends Migration
             $table->increments('id');
             $table->string('name', 30);
             $table->string('family', 50);
-            $table->string('email', 200);
-            $table->string('mobile', 11)->unique();
+            $table->string('email', 200)->default(null);
+            $table->string('mobile', 11)->default(null);
+//            $table->string('mobile', 11)->unique();
         });
     }
 

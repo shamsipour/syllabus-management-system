@@ -9,7 +9,7 @@ class Lesson extends Model
     public $timestamps = false;
     public $guarded = [];
     public $appends = ['level_caption'];
-    public $hidden = ['id', 'major_id', ];
+    public $hidden = ['id', 'major_id'];
 
     public function major()
     {
