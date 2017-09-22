@@ -2,8 +2,10 @@
 
     namespace App\Http\Controllers\API;
 
+    use App\Lesson;
     use App\Major;
     use App\Plan;
+    use App\Time;
     use Illuminate\Http\Request;
     use App\Http\Controllers\Controller;
     use Illuminate\Support\Facades\DB;
@@ -50,5 +52,23 @@
             else
                 $caption .= 'هفتگی دانشگاه';
             return ['success' => true, 'caption' => trim($caption), 'data' => $plans];
+        }
+
+        public function getMajors()
+        {
+            $records = Major::all();
+            return ['success' => true, 'caption' => 'رشته های دانشکده', 'data' => $records];
+        }
+
+        public function getLessons()
+        {
+            $records = Lesson::all();
+            return ['success' => true, 'caption' => 'دروس ارائه شده', 'data' => $records];
+        }
+
+        public function getTimes()
+        {
+            $records = Time::all();
+            return ['success' => true, 'caption' => 'ساعت کلی برگزاری کلاس ها', 'data' => $records];
         }
     }
