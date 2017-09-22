@@ -56,7 +56,7 @@
 
         public function getMajors()
         {
-            $records = Major::all();
+            $records = Major::orderBy('name')->orderBy('level')->get();
             return ['success' => true, 'caption' => 'رشته های دانشکده', 'data' => $records];
         }
 
