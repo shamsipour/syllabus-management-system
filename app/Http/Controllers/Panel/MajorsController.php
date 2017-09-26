@@ -17,8 +17,6 @@ class MajorsController extends Controller
      */
     public function index()
     {
-//        DB::enableQueryLog();
-//        dump(DB::getQueryLog());
         $records = Major::with('lessons')->orderBy('name', 'ASC')->paginate(config('system.PAGINATION_LIMIT'));
         return view('admin.pages.majors.manage', ['records' => $records]);
     }
