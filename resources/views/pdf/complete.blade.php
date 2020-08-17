@@ -42,7 +42,7 @@
 </head>
 <body>
 <htmlpageheader name="page-header">
-    <div><h1 class="text-center">سامانه آنلاین اعلام برنامه هفتگی دانشکده شمسی پور</h1></div>
+    <div><h1 class="text-center">سامانه آنلاین اعلام برنامه هفتگی دانشگاه علم و فرهنگ</h1></div>
     <hr>
 </htmlpageheader>
 <div>

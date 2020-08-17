@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>برنامه ها کلاسی دانشکده فنی شمسی پور</title>
+    <title>برنامه های کلاسی دانشگاه علم و فرهنگ</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Shamsipour Technical University">
@@ -22,16 +22,16 @@
                     {{--<img src="{{url('img/logo.png')}}" alt="" class="img-responsive">--}}
                 </div>
                 <div class="text-center">
-                    <h3>سامانه دریافت برنامه زمانبندی کلاس های دانشکده شمسی پور</h3>
+                    <h3>سامانه دریافت برنامه زمانبندی کلاس های دانشگاه علم و فرهنگ</h3>
                     <p class="text-justify">این وبسایت جهت نمایش برنامه هفتگی کلاس های دانشکده ایجاد شده است که شما دانشجویان عزیز میتوانید با مشخص نمودن روز مورد نظر در هفته، کلاس های موجود را مشاهده کنید. همچنین این امکان در نظر گرفته شده تا با کلیک بر روی دکمه مربوطه بتوانید برنامه تمام روز های هفته را در قالب PDF دانلود کنید.</p>
                     <p></p>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                         <button class="form-control btn btn-info">انتخاب یک روز خاص</button>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{url('plans.pdf')}}"><button class="form-control btn btn-success">دانلود PDF کل جدول هفتگی</button></a>
+                    </div> --}}
+                    <div class="col-md-12">
+                        <a href="{{url('plans/full-plans.pdf')}}"><button class="form-control btn btn-success">دانلود PDF کل جدول هفتگی</button></a>
                     </div>
                 </div>
             </div>

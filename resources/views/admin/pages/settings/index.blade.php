@@ -11,7 +11,7 @@
                 <br>
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <h4 class="text-center">برنامه هفتگی</h4>
 
                         <p class="text-center">با کلیک بر روی دکمه زیر میتوانید برنامه هفتگی ای که در سیستم ایجاد کرده
@@ -24,7 +24,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                         <h4 class="text-center">بک آپ دیتابیس</h4>
 
                         <p class="text-center">با کلیک بر روی دکمه زیر میتوانید بک آپ دیتابیس را با پسوند XLS دانلود و
@@ -36,10 +36,10 @@
                                 <div class="ripple-container"></div>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-md-12">
                         <h4 class="text-center">بازگردانی دیتابیس</h4>
                         <p class="text-center">با انتخاب و کلیک بر روی دکمه زیر میتوانید بک آپ دیتابیسی که از قبل ایجاد و دانلود کرده اید را مجددا بارگذاری کنید. توجه داشته باشید که تمامی اطلاعات قبلی حذف، و اطلاعات جدید جایگزین خواهند شد.</p>
@@ -62,7 +62,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 
